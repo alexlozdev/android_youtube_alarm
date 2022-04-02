@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBg2"
+    tools:context="com.gu.galarm.ui.activity.AddAlarmActivity">
+
+    <LinearLayout
+        android:id="@+id/llTitle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center_vertical"
+        android:background="@color/colorBg2">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center_vertical|left"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvTitleCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/title_margin_horizonatal"
+                android:text="Cancel"
+                android:textColor="@color/colorText1"
+                android:textSize="@dimen/title_menu_textsize"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Add Alarm"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/title_textsize"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center_vertical|right"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvTitleSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/title_margin_horizonatal"
+                android:text="Save"
+                android:textColor="@color/colorText1"
+                android:textSize="@dimen/title_menu_textsize"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/colorBg1" >
+
+            <TimePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/timePicker"
+                android:theme="@style/timeStyle"
+                android:timePickerMode="spinner"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:background="@color/colorBg2"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.3"
+            android:orientation="vertical"
+            android:background="@color/colorBg2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.3"
+                android:orientation="vertical"
+                android:background="@color/colorBg2">
+
+                <RelativeLayout
+                    android:id="@+id/rlRepeat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/item_margin_horizonatal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_alignParentLeft="true"
+                        android:text="Repeat"
+                        android:textSize="@dimen/item_textsize"
+                        android:textColor="@color/colorMain"/>
+
+                    <TextView
+                        android:id="@+id/tvRepeatS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="@dimen/item_margin_submenu"
+                        android:layout_alignParentRight="true"
+                        android:text=" > "
+                        android:textSize="@dimen/item_textsize"
+                        android:textColor="@color/colorMain"/>
+
+                    <TextView
+                        android:id="@+id/tvRepeat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_toLeftOf="@id/tvRepeatS"
+                        android:text="Never"
+                        android:textSize="@dimen/item_textsize"
+                        android:textColor="@color/colorMain"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rlLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/item_margin_horizonatal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/tvLabelLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/item_margin_horizonatal"
+                        android:layout_gravity="left"
+                        android:layout_alignParentLeft="true"
+                        android:text="Label"
+                        android:textSize="@dimen/item_textsize"
+                        android:textColor="@color/colorMain"/>
+
+                    <TextView
+                        android:id="@+id/tvLabelS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="@dimen/item_margin_submenu"
+                        android:layout_alignParentRight="true"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text=" > "
+                        android:textSize="@dimen/item_textsize"
+                        android:textColor="@color/colorMain"/>
+
+                    <TextView
+                        android:id="@+id/tvLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:layout_toLeftOf="@id/tvLabelS"
+                        android:layout_toRightOf="@id/tvLabelLabel"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text=""
+                        android:textSize="@dimen/item_textsize"
+                        android:textColor="@color/colorMain"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/item_margin_horizonatal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tvVideoLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/item_margin_horizonatal"
+                        android:text="Video"
+                        android:textSize="@dimen/item_textsize"
+                        android:textColor="@color/colorMain"/>
+
+                    <TextView
+                        android:id="@+id/tvVideoS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="@dimen/item_margin_submenu"
+                        android:layout_alignParentRight="true"
+                        android:text=" > "
+                        android:textSize="@dimen/item_textsize"
+                        android:textColor="@color/colorMain"/>
+
+                    <TextView
+                        android:id="@+id/tvVideo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:layout_toLeftOf="@id/tvVideoS"
+                        android:layout_toRightOf="@id/tvVideoLabel"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text=""
+                        android:textSize="@dimen/item_textsize"
+                        android:textColor="@color/colorMain"/>
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

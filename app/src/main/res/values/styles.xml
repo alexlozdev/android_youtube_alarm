@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Settings item theme. -->
+    <style name="settingsItem">
+        <item name="android:layout_height">64dp</item>
+        <item name="android:padding">14dp</item>
+    </style>
+
+    <style name="directionsButton" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="timeStyle" parent="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+        <item name="android:textColor">@color/colorPink</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColorPrimary">@color/colorPink</item>
+        <item name="android:divider">@color/colorBg2</item>
+
+    </style>
+
+
+    <style name="WindowAnimationTransition">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+
+</resources>

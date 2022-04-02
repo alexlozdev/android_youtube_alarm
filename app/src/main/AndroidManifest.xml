@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gu.galarm">
+
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="com.manveerbasra.ontime.permission.ALARM" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.gu.galarm.ui.activity.YoutubePlayActivity"
+            android:launchMode="singleTop"
+            android:label="@string/title_activity_youtube_play"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.gu.galarm.ui.activity.YoutubeActivity"
+            android:hardwareAccelerated="true"
+            android:label="@string/title_activity_youtube"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.gu.galarm.ui.activity.LabelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.gu.galarm.ui.activity.RepeatActivity"
+            android:label="@string/title_activity_repeat"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.gu.galarm.ui.activity.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.gu.galarm.ui.activity.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.gu.galarm.ui.activity.AddAlarmActivity"
+            android:label="@string/add_alarm"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.gu.galarm.ui.activity.MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.gu.galarm.ui.activity.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName="com.gu.galarm.ui.activity.MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gu.galarm.ui.activity.MainActivity" />
+        </activity>
+
+        <receiver
+            android:name="com.gu.galarm.alarmmanager.receiver.TimeShiftReceiver" />
+        <receiver
+            android:name="com.gu.galarm.alarmmanager.receiver.AlarmReceiver">
+
+        </receiver>
+        <receiver
+            android:name="com.gu.galarm.alarmmanager.receiver.AlarmStopReceiver">
+            <intent-filter>
+                <action android:name="Stop Alarm" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.gu.galarm.alarmmanager.receiver.AlarmSnoozeReceiver">
+            <intent-filter>
+                <action android:name="Snooze Alarm" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.gu.galarm.alarmmanager.receiver.RestoreOnBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="android.intent.action.TIME_SET" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

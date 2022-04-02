@@ -1,0 +1,23 @@
+<resources>
+    <!-- Margins. -->
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="alarm_margin">20dp</dimen> <!-- Margin around Alarm item -->
+
+    <!-- Text sizes. -->
+    <dimen name="alarm_text_size">36sp</dimen>
+    <dimen name="small_text_size">14sp</dimen>
+    <dimen name="med_text_size">16sp</dimen>
+    <dimen name="big_text_size">18sp</dimen>
+
+    <dimen name="title_textsize">20sp</dimen>
+    <dimen name="title_menu_textsize">16sp</dimen>
+    <dimen name="add_alarm_size">18dp</dimen>
+    <dimen name="title_margin_horizonatal">30dp</dimen>
+    <dimen name="repeat_item_margin">10dp</dimen>
+
+    <dimen name="item_margin_horizonatal">10dp</dimen>
+    <dimen name="item_margin_submenu">3dp</dimen>
+
+    <dimen name="item_textsize">16sp</dimen>
+    <dimen name="time_textsize">50sp</dimen>
+</resources>
